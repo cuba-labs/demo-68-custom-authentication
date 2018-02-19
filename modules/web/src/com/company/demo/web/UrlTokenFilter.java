@@ -20,7 +20,7 @@ public class UrlTokenFilter implements HttpRequestFilter {
             ((HttpServletRequest) request).getSession().setAttribute("token", "true");
         }
 
-        chain.doFilter(request, response);
+        chain.doFilter(request, response); // required !
     }
 
     @Override
